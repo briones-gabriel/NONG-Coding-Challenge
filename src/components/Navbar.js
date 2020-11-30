@@ -7,7 +7,7 @@ function Navbar(props) {
         e.preventDefault();
     }
     return (
-        <nav className="nav-wrapper blue">
+        <nav className="nav-wrapper green accent-4">
             <div className="container">
                 <a href="/" className="brand-logo" onClick={handleClick}>NONG Coding Challenge</a>
                 <ul className="right">

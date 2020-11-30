@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-import firebase from './firebaseConfig';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import React from 'react';
+// import firebase from './auth/firebaseConfig';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
-import SignIn from './components/SingIn';
+import SignIn from './components/auth/SingIn';
+import Home from './components/Home';
 
 function App() {
   return (
@@ -12,7 +13,6 @@ function App() {
         <Navbar />
         <Route exact path="/" component={Home} />
         <Route path="/login" component={SignIn} />
-        <Route path="/note/:id" component={FullNote} />
         <SignIn />
       </div>
     </BrowserRouter>
