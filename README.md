@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# NONG Coding Challenge
+<h3>Project URL: https://nong-coding-challenge-975fa.web.app/</h3>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Test credentials
+Email: testuser@hotmail.com | Password: test1234
 
 ## Available Scripts
 
