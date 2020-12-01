@@ -10,7 +10,7 @@ function NoteList() {
 
     function getNotes() {
         setLoading(true);
-        db.onSnapshot((snapshot) => {
+        db.orderBy('date', 'desc').onSnapshot((snapshot) => {
             const notes = [];
             snapshot.forEach((doc) => {
                 notes.push(doc);
