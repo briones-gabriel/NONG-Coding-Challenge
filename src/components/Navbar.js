@@ -1,18 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
+import firebase from './auth/firebaseConfig';
+import { AuthContext } from './auth/Auth';
 
-function Navbar(props) {
-    // function to prevent page reload
+function Navbar() {
     function handleClick(e) {
         e.preventDefault();
     }
+    function handleLogOut() {
+        firebase.auth().signOut();
+    }
+    const { user } = useContext(AuthContext);
     return (
         <nav className="nav-wrapper green accent-4">
             <div className="container">
                 <a href="/" className="brand-logo" onClick={handleClick}>NONG Coding Challenge</a>
                 <ul className="right">
-                    <li><NavLink to="/">Log Out</NavLink></li>
+                    {user ? (<li><NavLink to="/" onClick={handleLogOut}>Log Out</NavLink></li>) : (<p></p>)}
                 </ul>
+
             </div>
         </nav>
     );

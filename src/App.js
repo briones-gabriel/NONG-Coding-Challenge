@@ -5,17 +5,20 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import SignIn from './components/auth/SingIn';
 import Home from './components/Home';
+import { AuthProvider } from './components/auth/Auth';
+import PrivateRoute from './components/auth/PrivateRoute';
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="App">
+    <AuthProvider>
+      <BrowserRouter>
         <Navbar />
-        <Route exact path="/" component={Home} />
-        <Route path="/login" component={SignIn} />
-        <SignIn />
-      </div>
-    </BrowserRouter>
+        <div className="App">
+          <PrivateRoute exact path="/" component={Home} />
+          <Route exact path="/login" component={SignIn} />
+        </div>
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
 

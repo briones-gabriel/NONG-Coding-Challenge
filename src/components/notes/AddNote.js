@@ -1,14 +1,17 @@
 import React from 'react';
+import firebase from '../auth/firebaseConfig';
 
 function AddNote() {
     function handleSubmit(e) {
         e.preventDefault();
         const { author, date, description } = e.target.elements;
-        console.log(author.value, date.value, description.value);
+        firebase.firestore().collection('notes').doc().set({ author: author.value, date: date.value, description: description.value });
+        e.target.reset();
+        description.setAttribute('style', '');
     }
     return (
         <div>
-            <form className="col s4" onSubmit={handleSubmit}>
+            <form className="col s4" id="addForm" onSubmit={handleSubmit}>
                 <h3 className="grey-text text-darken-3 title">Add a note</h3>
                 <div className="input-field">
                     <i className="material-icons prefix">person_outline</i>
@@ -21,7 +24,7 @@ function AddNote() {
                 </div>
                 <div className="input-field">
                     <i className="material-icons prefix">description</i>
-                    <textarea type="text" id="description" className="materialize-textarea" required />
+                    <textarea id="description" className="materialize-textarea" required />
                     <label htmlFor="description">Description</label>
                 </div>
                 <div className="input-field">
