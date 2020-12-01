@@ -1,9 +1,6 @@
 # NONG Coding Challenge
 <h3>Project URL: https://nong-coding-challenge-975fa.web.app/</h3>
 
-### Test credentials
-Email: testuser@hotmail.com | Password: test1234
-
 ## Available Scripts
 
 In the project directory, you can run:
