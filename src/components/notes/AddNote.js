@@ -11,7 +11,7 @@ function AddNote() {
     }
     return (
         <div>
-            <form className="col s4" id="addForm" onSubmit={handleSubmit}>
+            <form className="col s12" id="addForm" onSubmit={handleSubmit}>
                 <h3 className="grey-text text-darken-3 title">Add a note</h3>
                 <div className="input-field">
                     <i className="material-icons prefix">person_outline</i>

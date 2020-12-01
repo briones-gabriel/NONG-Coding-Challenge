@@ -6,8 +6,10 @@ function Home() {
     return (
         <div className="container">
             <div className="row">
-                <AddNote />
-                <div className="col s8">
+                <div className="col s12 m4">
+                    <AddNote />
+                </div>
+                <div className="col s12 m8">
                     <NoteList />
                 </div>
             </div>

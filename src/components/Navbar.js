@@ -14,7 +14,7 @@ function Navbar() {
     return (
         <nav className="nav-wrapper green accent-4">
             <div className="container">
-                <a href="/" className="brand-logo" onClick={handleClick}>NONG Coding Challenge</a>
+                <a href="/" className="left brand-logo" onClick={handleClick}>NONG Challenge</a>
                 <ul className="right">
                     {user ? (<li><NavLink to="/" onClick={handleLogOut}>Log Out</NavLink></li>) : (<p></p>)}
                 </ul>

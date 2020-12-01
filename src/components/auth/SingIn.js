@@ -23,7 +23,7 @@ function SingIn({ history }) {
     return (
         <div className="container">
             <div className="row">
-                <form onSubmit={handleSubmit} className="col s6 center push-s3">
+                <form onSubmit={handleSubmit} className="col s12 m6 center push-m3">
                     <h3 className="grey-text text-darken-3">Sign In</h3>
                     <div className="input-field">
                         <label htmlFor="email">Email</label>
